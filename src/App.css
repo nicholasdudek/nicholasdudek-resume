@@ -1,0 +1,191 @@
+/* Animated hover for name, subtitle, contact, education header, and degree */
+.animated-hover {
+  transition: color 0.22s, text-shadow 0.22s, transform 0.22s, background 0.22s;
+  cursor: pointer;
+}
+.animated-hover:hover {
+  color: #ff0055 !important;
+  background: rgba(255,0,85,0.08);
+  text-shadow: 0 2px 16px #ff0055cc, 0 1px 4px #000a;
+  transform: scale(1.04) skewY(-1deg) rotate(-0.5deg);
+  border-radius: 6px;
+}
+.name-title.animated-hover:hover {
+  color: #fff !important;
+  background: #ff0055;
+  text-shadow: 0 2px 24px #ff0055cc, 0 1px 4px #000a;
+  transform: scale(1.06) skewY(-1deg) rotate(-1deg);
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: linear-gradient(135deg, #18181b 80%, #ff0055 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0;
+  overflow: auto;
+}
+
+.resume.punk-theme {
+  background: #18181a;
+  color: #fff;
+  max-width: 800px;
+  width: 100%;
+  min-height: 200px;
+  max-height: calc(100vh - 40px);
+  margin: 20px;
+  border-radius: 32px;
+  box-shadow: 0 8px 32px 0 #ff005533, 0 1.5px 8px 0 #000a;
+  border: 2.5px solid #ff0055;
+  padding: 32px 28px;
+  font-family: 'JetBrains Mono', 'Fira Mono', 'Menlo', 'monospace';
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.resume.punk-theme h1 {
+  font-size: 2.8rem;
+}
+.resume.punk-theme h2 {
+  font-size: 1.4rem;
+}
+@media (max-width: 600px) {
+  body {
+    padding: 4px;
+  }
+  .resume.punk-theme {
+    padding: clamp(0.25rem, 2vw, 1rem);
+    border-radius: 0;
+  }
+}
+@media (max-width: 600px) {
+  .resume.punk-theme {
+    width: 100vw;
+    min-width: 0;
+    margin: 0;
+    padding: clamp(0.25rem, 2vw, 1rem);
+    border-radius: 0;
+  }
+}
+.resume.punk-theme header {
+  border-bottom: 2px dashed #ff0055;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  text-align: left;
+}
+.resume.punk-theme h1 {
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  color: #ff0055;
+  margin: 0 0 0.2em 0;
+  text-shadow: 0 2px 8px #000a;
+}
+.resume.punk-theme .subtitle {
+  font-size: 1.2rem;
+  color: #f8f8f2cc;
+  margin-bottom: 0.5em;
+}
+.resume.punk-theme .contact {
+  font-size: 1rem;
+  color: #b8b8b8;
+  margin-bottom: 0.5em;
+}
+.resume.punk-theme .section {
+  margin-bottom: 2rem;
+}
+.resume.punk-theme h2 {
+  color: #ff0055;
+  font-size: 1.4rem;
+  border-left: 4px solid #ff0055;
+  padding-left: 0.5em;
+  margin-bottom: 0.7em;
+  text-shadow: 0 1px 4px #000a;
+}
+.resume.punk-theme .item {
+  margin-bottom: 1.2em;
+}
+.resume.punk-theme h3 {
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 0 0 0.2em 0;
+  font-weight: 600;
+}
+.resume.punk-theme h3 span {
+  color: #ff0055;
+  font-weight: 400;
+}
+.resume.punk-theme .date {
+  font-size: 0.95em;
+  color: #ffb3d1;
+  margin-left: 0.5em;
+}
+.resume.punk-theme ul {
+  margin: 0.2em 0 0.7em 1.2em;
+  padding: 0;
+  list-style: square inside;
+}
+.resume.punk-theme .skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7em;
+  list-style: none;
+  margin-left: 0;
+}
+.resume.punk-theme .skills li {
+  background: #ff0055;
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.3em 0.8em;
+  font-size: 0.98em;
+  font-weight: 500;
+  box-shadow: 0 1px 4px #000a;
+}
+.resume.punk-theme a {
+  color: #ffb3d1;
+  text-decoration: underline wavy #ff0055;
+  transition: color 0.2s, background 0.2s, transform 0.2s;
+  position: relative;
+  z-index: 1;
+}
+.resume.punk-theme a:hover {
+  color: #fff;
+  background: #ff0055;
+  border-radius: 3px;
+  padding: 0 0.2em;
+  transform: scale(1.08) rotate(-1deg);
+  box-shadow: 0 2px 12px #ff005555;
+}
+
+/* Animate section headers on hover */
+.resume.punk-theme h2 {
+  transition: color 0.2s, text-shadow 0.2s, transform 0.2s;
+}
+.resume.punk-theme h2:hover {
+  color: #fff;
+  text-shadow: 0 2px 12px #ff0055cc, 0 1px 4px #000a;
+  transform: scale(1.03) skewX(-2deg);
+}
+
+/* Animate collapsible triggers (h3, h4) on hover */
+.resume.punk-theme h3[style*="cursor: pointer"],
+.resume.punk-theme h4[style*="cursor: pointer"] {
+  transition: color 0.2s, text-shadow 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+.resume.punk-theme h3[style*="cursor: pointer"]:hover,
+.resume.punk-theme h4[style*="cursor: pointer"]:hover {
+  color: #ff0055;
+  text-shadow: 0 2px 12px #ff0055cc, 0 1px 4px #000a;
+  transform: scale(1.04) skewY(-1deg);
+}
