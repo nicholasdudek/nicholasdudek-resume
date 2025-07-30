@@ -1,3 +1,6 @@
+.resume.punk-theme {
+  cursor: url('/screaming-hand-cursor.png'), auto;
+}
 /* Animated hover for name, subtitle, contact, education header, and degree */
 .animated-hover {
   transition: color 0.22s, text-shadow 0.22s, transform 0.22s, background 0.22s;
