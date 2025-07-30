@@ -2,11 +2,19 @@
 import './App.css';
 import { useState } from 'react';
 
+const clickSound = typeof window !== 'undefined' ? new Audio('click-sound.mp3') : null;
+function playClick() {
+  if (clickSound) {
+    clickSound.currentTime = 0;
+    clickSound.play();
+  }
+}
+
 function CollapsibleExperience({ title, subtitle, date, children }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="item">
-      <h3 style={{ cursor: 'pointer' }} onClick={() => setOpen((v) => !v)}>
+      <h3 style={{ cursor: 'pointer' }} onClick={() => { playClick(); setOpen((v) => !v); }}>
         {title} <span>{subtitle}</span> <span style={{ fontWeight: 400, fontSize: '0.9em', marginLeft: 8 }}>{date}</span>
         <span style={{ marginLeft: 8, color: '#ff0055' }}>{open ? '▲' : '▼'}</span>
       </h3>
@@ -19,7 +27,7 @@ function CollapsibleSkills({ title, children }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="skills-group">
-      <h4 style={{ cursor: 'pointer' }} onClick={() => setOpen((v) => !v)}>
+      <h4 style={{ cursor: 'pointer' }} onClick={() => { playClick(); setOpen((v) => !v); }}>
         {title} <span style={{ marginLeft: 8, color: '#ff0055' }}>{open ? '▲' : '▼'}</span>
       </h4>
       {open && children}
@@ -31,7 +39,7 @@ function CollapsibleCertificate({ title, date, children }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="item">
-      <h3 style={{ cursor: 'pointer' }} onClick={() => setOpen((v) => !v)}>
+      <h3 style={{ cursor: 'pointer' }} onClick={() => { playClick(); setOpen((v) => !v); }}>
         {title} <span className="date">{date}</span>
         <span style={{ marginLeft: 8, color: '#ff0055' }}>{open ? '▲' : '▼'}</span>
       </h3>
