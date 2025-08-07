@@ -135,8 +135,8 @@ function App() {
         </div>
       </section>
       <div className="contact" style={{ marginTop: '2rem', textAlign: 'center' }}>
-        <a href="https://github.com/nicholasdudek/" target="_blank" rel="noopener noreferrer">GitHub</a> | 
-        <a href="https://www.nobledesktop.com/credentials/8df896e3-0224-4988-b18a-6d5305b46f27" target="_blank" rel="noopener noreferrer"> Noble Desktop</a>
+        <a href="https://euphonious-llama-b1c99c.netlify.app/">Portfolio</a> | 
+        <a href="https://www.nobledesktop.com/credentials/student/e864c328-ec13-4d05-a5b8-e0db64f89abb"> Noble Desktop</a>
       </div>
     </div>
   );
